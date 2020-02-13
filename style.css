@@ -4,12 +4,23 @@ body {
     font-family: 'Raleway', sans-serif;
     font-size: 14px;
     color: #6c7279;
+    -webkit-font-smoothing: antialiased;  /* данное свойство сглаживает шрифты */
+
+    background-color: #fff;
 }
 
 *, 
 *:before,
 *:after {
     box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+p {
+    margin: 0 0 10px;
 }
 
 /* Container 
@@ -26,7 +37,13 @@ body {
 =========== */
 
 .header {
-    
+    width: 100%;
+    height: 100px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
 .header__inner {
@@ -34,13 +51,116 @@ body {
 
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
-    border-bottom: 1px solid #515369;
+    border-bottom: 1px solid #333650;
 }
 
 /* Nav 
 ======== */
 
 .nav {
-    
+    display: flex;
+    font-size: 13px;
 }
+
+.nav__link {
+    margin-left: 55px;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    opacity: 0.75;
+
+    transition: opacity .1s linear;
+}
+
+.nav__link:first-child {
+    margin-left: 0;
+}
+
+.nav__link:hover {
+    opacity: 1;
+}
+
+ /*Intro*/
+
+  .intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    height: 750px;
+    padding-top: 100px;
+
+    position: relative;
+
+    background: #31344e url("img/intro-bg_01.jpg") 
+    center no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+   
+    z-index: 1;      
+ }
+
+.intro__inner {
+    width: 100%;
+    max-width: 970px;
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+.intro__title {
+    margin: 0 0 30px;
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 65px;
+    font-weight: 700;
+    line-height: 1.1; /* величина пропорциональна размеру шрифта */
+    text-transform: uppercase; 
+    color: #ffffff;  
+     
+} 
+
+.intro__suptitle {
+    margin-bottom: 60px;
+
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #ffffff;          
+}
+
+/* Button 
+=========== */
+
+.btn {
+    display: inline-block;
+    vertical-align: top;
+    padding: 15px 40px;
+
+    border-radius: 2px;
+    border: 0;
+    cursor: pointer;
+    
+    font-family: 'Raleway', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;  
+
+    transition: background .1s linear;
+}
+
+.btn--red {
+  background-color: #e84545; 
+  color: #fff; 
+  border: 0;
+}
+
+.btn--red:hover {
+    background-color: #dd3434;
+}
+
