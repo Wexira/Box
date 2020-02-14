@@ -14,6 +14,31 @@
 
 <body>
 
+    <!-- Sprite -->
+    <svg style="display: none;">
+
+        <symbol id="facebook" viewBox="0 0 512 512">
+            <g>
+                <path d="M288,176v-64c0-17.664,14.336-32,32-32h32V0h-64c-53.024,0-96,42.976-96,96v80h-64v80h64v256h96V256h64l32-80H288z"/>
+            </g>
+        </symbol>
+
+        <symbol id="twitter" viewBox="0 -47 512.00203 512">
+            <g>
+                <path d="m191.011719 419.042969c-22.140625 0-44.929688-1.792969-67.855469-5.386719-40.378906-6.335938-81.253906-27.457031-92.820312-33.78125l-30.335938-16.585938 32.84375-10.800781c35.902344-11.804687 57.742188-19.128906 84.777344-30.597656-27.070313-13.109375-47.933594-36.691406-57.976563-67.175781l-7.640625-23.195313 6.265625.957031c-5.941406-5.988281-10.632812-12.066406-14.269531-17.59375-12.933594-19.644531-19.78125-43.648437-18.324219-64.21875l1.4375-20.246093 12.121094 4.695312c-5.113281-9.65625-8.808594-19.96875-10.980469-30.777343-5.292968-26.359376-.863281-54.363282 12.476563-78.851563l10.558593-19.382813 14.121094 16.960938c44.660156 53.648438 101.226563 85.472656 168.363282 94.789062-2.742188-18.902343-.6875-37.144531 6.113281-53.496093 7.917969-19.039063 22.003906-35.183594 40.722656-46.691407 20.789063-12.777343 46-18.96875 70.988281-17.433593 26.511719 1.628906 50.582032 11.5625 69.699219 28.746093 9.335937-2.425781 16.214844-5.015624 25.511719-8.515624 5.59375-2.105469 11.9375-4.496094 19.875-7.230469l29.25-10.078125-19.074219 54.476562c1.257813-.105468 2.554687-.195312 3.910156-.253906l31.234375-1.414062-18.460937 25.230468c-1.058594 1.445313-1.328125 1.855469-1.703125 2.421875-1.488282 2.242188-3.339844 5.03125-28.679688 38.867188-6.34375 8.472656-9.511718 19.507812-8.921875 31.078125 2.246094 43.96875-3.148437 83.75-16.042969 118.234375-12.195312 32.625-31.09375 60.617187-56.164062 83.199219-31.023438 27.9375-70.582031 47.066406-117.582031 56.847656-23.054688 4.796875-47.8125 7.203125-73.4375 7.203125zm0 0"/>
+            </g>
+        </symbol>
+
+        <symbol id="LinkedIn" viewBox="0 0 512 512">
+        <g>
+            <path d="m475.074219 0h-438.148438c-20.394531 0-36.925781 16.53125-36.925781 36.925781v438.148438c0 20.394531 16.53125 36.925781 36.925781 36.925781h438.148438c20.394531 0 36.925781-16.53125 36.925781-36.925781v-438.148438c0-20.394531-16.53125-36.925781-36.925781-36.925781zm-293.464844 387h-62.347656v-187.574219h62.347656zm-31.171875-213.1875h-.40625c-20.921875 0-34.453125-14.402344-34.453125-32.402344 0-18.40625 13.945313-32.410156 35.273437-32.410156 21.328126 0 34.453126 14.003906 34.859376 32.410156 0 18-13.53125 32.402344-35.273438 32.402344zm255.984375 213.1875h-62.339844v-100.347656c0-25.21875-9.027343-42.417969-31.585937-42.417969-17.222656 0-27.480469 11.601563-31.988282 22.800781-1.648437 4.007813-2.050781 9.609375-2.050781 15.214844v104.75h-62.34375s.816407-169.976562 0-187.574219h62.34375v26.558594c8.285157-12.78125 23.109375-30.960937 56.1875-30.960937 41.019531 0 71.777344 26.808593 71.777344 84.421874zm0 0"/>
+        </g>
+        </symbol>
+
+    </svg>
+
+
+
     <!-- Header -->
 
     <header class="header">
@@ -193,91 +218,76 @@
                             Founder, CEO
                         </div>
                         <div class="team__text">
-                            Fusce dapibus, tellus ac cursus<br> commodo, tortor mauris condimentum<br> nibh, ut fermentum massa justo sit amet<br> risus. Maecenas sed diam eget risus<br>  varius blandit sit amet non magna.<br> Nullam quis risus eget urna mollis ornare<br> vel eu leo.
+                            Fusce dapibus, tellus ac cursus<br> commodo, tortor mauris condimentum<br> nibh, ut
+                            fermentum massa justo sit amet<br> risus. Maecenas sed diam eget risus<br> varius blandit
+                            sit amet non magna.<br> Nullam quis risus eget urna mollis ornare<br> vel eu leo.
                         </div>
-                        <div class="team__social">
+                        <div class="social">
                             <a class="social__item" href="#" target="_blank">
-                                <i class="fab fa-facebook-f"></i>
+                                <svg class="social__icon">
+                                    <use xlink:href="#facebook"></use>
+                                </svg>
                             </a>
                             <a class="social__item" href="#" target="_blank">
-                                <i class="fab fa-twitter"></i>
+                                <svg class="social__icon">
+                                    <use xlink:href="#twitter"></use>
+                                </svg>
                             </a>
                             <a class="social__item" href="#" target="_blank">
-                                <i class="fab fa-instagram"></i>
+                                <svg class="social__icon">
+                                    <use xlink:href="#linkedIn"></use>
+                                </svg>
                             </a>
-                        </div> 
+                           
+                        </div>
                     </div> <!-- /.team__item -->
 
                     <div class="team__item">
                         <img class="team__photo" src="img/team/team2.jpg" alt="">
                         <div class="team__name">
-                            Timothy Reed                        
+                            Timothy Reed
                         </div>
                         <div class="team__prof">
                             Co-Founder, Developer
                         </div>
                         <div class="team__text">
-                            Fusce dapibus, tellus ac cursus<br> commodo, tortor mauris condimentum<br> nibh, ut fermentum massa justo sit amet<br> risus. Maecenas sed diam eget risus<br>  varius blandit sit amet non magna.<br> Nullam quis risus eget urna mollis ornare<br> vel eu leo.
+                            Fusce dapibus, tellus ac cursus<br> commodo, tortor mauris condimentum<br> nibh, ut
+                            fermentum massa justo sit amet<br> risus. Maecenas sed diam eget risus<br> varius blandit
+                            sit amet non magna.<br> Nullam quis risus eget urna mollis ornare<br> vel eu leo.
                         </div>
-                        <div class="team__social">
-                            <a class="social__item" href="#" target="_blank">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a class="social__item" href="#" target="_blank">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a class="social__item" href="#" target="_blank">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                        </div> 
+                       
                     </div> <!-- /.team__item -->
 
                     <div class="team__item">
                         <img class="team__photo" src="img/team/team3.jpg" alt="">
                         <div class="team__name">
-                            Victoria Valdez                        
+                            Victoria Valdez
                         </div>
                         <div class="team__prof">
                             UI Designer
                         </div>
                         <div class="team__text">
-                            Fusce dapibus, tellus ac cursus<br> commodo, tortor mauris condimentum<br> nibh, ut fermentum massa justo sit amet<br> risus. Maecenas sed diam eget risus<br>  varius blandit sit amet non magna.<br> Nullam quis risus eget urna mollis ornare<br> vel eu leo.
+                            Fusce dapibus, tellus ac cursus<br> commodo, tortor mauris condimentum<br> nibh, ut
+                            fermentum massa justo sit amet<br> risus. Maecenas sed diam eget risus<br> varius blandit
+                            sit amet non magna.<br> Nullam quis risus eget urna mollis ornare<br> vel eu leo.
                         </div>
-                        <div class="team__social">
-                            <a class="social__item" href="#" target="_blank">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a class="social__item" href="#" target="_blank">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a class="social__item" href="#" target="_blank">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                        </div> 
+                        
                     </div> <!-- /.team__item -->
 
                     <div class="team__item">
                         <img class="team__photo" src="img/team/team4.jpg" alt="">
                         <div class="team__name">
-                            Beverly Little                        
+                            Beverly Little
                         </div>
                         <div class="team__prof">
                             Data Scientist
                         </div>
                         <div class="team__text">
-                            Fusce dapibus, tellus ac cursus<br> commodo, tortor mauris condimentum<br> nibh, ut fermentum massa justo sit amet<br> risus. Maecenas sed diam eget risus<br>  varius blandit sit amet non magna.<br> Nullam quis risus eget urna mollis ornare<br> vel eu leo.
+                            Fusce dapibus, tellus ac cursus<br> commodo, tortor mauris condimentum<br> nibh, ut
+                            fermentum massa justo sit amet<br> risus. Maecenas sed diam eget risus<br> varius blandit
+                            sit amet non magna.<br> Nullam quis risus eget urna mollis ornare<br> vel eu leo.
                         </div>
-                        <div class="team__social">
-                            <a class="social__item" href="#" target="_blank">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a class="social__item" href="#" target="_blank">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a class="social__item" href="#" target="_blank">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                        </div> 
+                       
                     </div> <!-- /.team__item -->
 
                 </div> <!-- /.team__inner -->

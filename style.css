@@ -28,8 +28,9 @@ p {
 
 .container {
     width: 100%;
-    max-width: 1170px;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 15px;
 }
 
 
@@ -282,7 +283,7 @@ p {
 =========== */
 
 .team {
-    margin: 100px 0;
+    margin: 100px 0 70px;
 }
 
 .team__inner {
@@ -294,6 +295,7 @@ p {
 .team__item {
     width: 25%;
     padding: 0 15px;
+    margin-bottom: 30px;
 }
 
 .team__photo {
@@ -326,6 +328,8 @@ p {
 }
 
 .team__text {
+    margin-bottom: 20px;
+
     font-size: 14px;
     font-weight: 400;
     line-height: 1.5;
@@ -333,6 +337,41 @@ p {
     color: #6c7279;
 }
 
-.team__social {
-    
+/* Social 
+=============*/
+
+.social {
+    display: flex;
+}
+
+.social__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+
+    background-color: #fff;
+    border: 1px solid #e8ecee;
+
+    transition: background 0.1s linear;
+}
+
+.social__item:hover {
+    background-color: #e8ecee;
+}
+
+.social__item:hover .social__icon {
+    fill: #e84545;
+}
+
+.social__icon {
+    display: block;
+    height: 18px;
+
+    fill: #c6cacc; 
+    /* Проверить на отсутствие атрибута fill в теге symbol (html), если он есть, то он пересилит стили из css */
+
+    transition: fill .1s linear;
 }
