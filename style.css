@@ -48,6 +48,22 @@ p {
     z-index: 1000;
 }
 
+.header.fixed {
+    height: auto;
+    
+    position: fixed;
+
+    background-color: #31344e;
+}
+
+.header.fixed .header__inner {
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    border-bottom: 0;
+}
+
+
 .header__inner {
     padding: 35px 0;
 
@@ -467,7 +483,7 @@ p {
     
     font-size: 28px; 
     font-weight: 300;
-    line-height: 0.75;
+    
     color: #2d3033;
         
 } 
@@ -655,15 +671,19 @@ p {
         justify-content: center;
     }
 
-    /* reviews */
+    /* Reviews */
 
     .reviews__photo {
         width: 100%;
+        margin: 40px 0;
+
         overflow: hidden;
     }
 
     .reviews__content {
         width: 100%;
+        padding-left: 0;
+        padding-bottom: 40px;
     }
 
     .reviews__img {
@@ -675,6 +695,7 @@ p {
 @media (max-width: 767px) {
 
     /* Intro */
+
     .intro {
         height: auto;
         padding-top: 130px;
@@ -690,7 +711,7 @@ p {
         margin-bottom: 30px;
     }
 
-    /* features */
+    /* Features */
 
     .features {
         margin: 40px 0;
@@ -720,8 +741,49 @@ p {
         
     }
 
+    /* Reviews */
+
+    .reviews__text {
+        font-size: 20px;
+    }
+
+    /* Download */
+    .download {
+        margin: 50px 0;
+    }
+
+    .download__title {
+        font-size: 24px;
+    }
+
+    /* Btn */
+    .button--long {
+        min-width: 260px;
+
+    }
+
+    /* Footer */
+    .footer__inner {
+        padding: 30px 0;
+    }
+
+    .footer__block {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .footer__block:last-child {
+        margin-bottom: 0;
+    }
 
 }
 
+@media (max-width: 414px) {
 
-
+    /* Rewievs */
+    .reviews__img {
+        right: -100px;
+    }
+}
