@@ -1,17 +1,32 @@
 <!doctype html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
     <link
         href="https://fonts.googleapis.com/css?family=Cardo:400i|Open+Sans:700|Raleway:300,400,600,700&display=swap&subset=cyrillic"
         rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 
     <link rel="stylesheet" href="style.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- width=device-width (Ширина будет равняться ширине нашего девайса);
     initial-scale=1 (зум страницы пальцами)-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <meta name="description" content="Описание страницы">
+    <meta name="keywords" content="Ключевые слова разрабатываемой страницы (создание сайтов, верстка сайтов и т.д.)">
+    <meta name="google" content="notranslate">
+    <!-- description это краткое описание страницы, по которому поисковики ищут -->
 
     <title>ActiveBox</title>
 
@@ -54,7 +69,8 @@
                 <div class="header__logo">
                     <img src="img/activebox-logo.png" alt="">
                 </div>
-                <nav class="nav">
+
+                <nav class="nav" id="nav">
                     <a class="nav__link" href="#" data-scroll="#features">Features</a>
                     <a class="nav__link" href="#" data-scroll="#works">Works</a>
                     <a class="nav__link" href="#" data-scroll="#team">Our team</a>
@@ -62,7 +78,7 @@
                     <a class="nav__link" href="#" data-scroll="#download">Download</a>
                 </nav>
 
-                <button class="burger" type="button">
+                <button class="burger" type="button" id="navToggle">
                     <span class="burger__item">Menu</span>
                 </button>
 
@@ -356,27 +372,49 @@
 
     <!-- Testimonials -->
 
-    <section class="section" id="reviews">
-        <div class="reviews">
-            <div class="container">
-                <div class="reviews__item">
-                    <div class="reviews__photo">
-                        <img class="reviews__img" src="img/clients/clients.jpg" alt="">
-                    </div>
-                    <div class="reviews__content">
-                        <div class="reviews__text">
-                            “Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui.
-                            Aenean eu leo quam...”
+
+    <div class="reviews" id="reviews">
+        <div class="container">
+            <div class="reviews__slider" id="reviewsSlider">
+                <div class="slick-item">
+                    <div class="reviews__item">
+                        <div class="reviews__photo">
+                            <img class="reviews__img" src="img/clients/clients.jpg" alt="">
                         </div>
-                        <div class="reviews__author">
-                            Susan Sims, Interaction Designer at XYZ
+                        <div class="reviews__content">
+                            <div class="reviews__text">
+                                “Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio
+                                dui.
+                                Aenean eu leo quam...”
+                            </div>
+                            <div class="reviews__author">
+                                Susan Sims, Interaction Designer at XYZ
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slick-item">
+                    <div class="reviews__item">
+                        <div class="reviews__photo">
+                            <img class="reviews__img" src="img/clients/clients.jpg" alt="">
+                        </div>
+                        <div class="reviews__content">
+                            <div class="reviews__text">
+                                “Lorem ipsum dolor sit amet, consectetur adipisicing elit. Integer posuere erat a ante
+                                venenatis dapibus posuere velit aliquet. Donec sed odio
+                                dui.”
+                            </div>
+                            <div class="reviews__author">
+                                Susan Sims, Interaction Designer at XYZ
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-    </section>
 
     <div class="download" id="download">
         <div class="container">
@@ -451,6 +489,8 @@
     </footer>
 
     <!-- Javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
     <script src="app.js"></script>
 
 
